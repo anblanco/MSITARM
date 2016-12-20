@@ -392,7 +392,7 @@
       },
       {
             "apiVersion": "2015-01-01",
-            "name": "AttachVMtoPullServer",
+            "name": "[concat(parameters('vmName'),'-AttachToPullServer')]",
             "type": "Microsoft.Resources/deployments",
             "properties": {
                 "mode": "Incremental",

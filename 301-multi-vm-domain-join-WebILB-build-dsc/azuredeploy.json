@@ -447,7 +447,7 @@
     },
     {
       "apiVersion": "2015-01-01",
-      "name": "[concat('AttachVMtoPullServer',parameters('DiskConfig'),copyindex(1))]",
+      "name": "[concat(parameters('vmName'),copyindex(1),'AttachToPullServer')]",
       "type": "Microsoft.Resources/deployments",
       "copy": {
         "name": "AttachVMtoPullServerLoop",
@@ -553,7 +553,7 @@
         }
       },
       "dependsOn": [
-        "[concat('Microsoft.Resources/deployments/','AttachVMtoPullServer',parameters('DiskConfig'),'1')]"
+        "AttachVMtoPullServerLoop"
       ]
     }
   ]
