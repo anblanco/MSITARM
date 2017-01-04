@@ -267,8 +267,8 @@
      "branch": "master",
     "SQLfolder": "/301-multi-vm-domain-join-SQLILB-build-dsc/",
     "IISfolder": "/301-multi-vm-domain-join-WebILB-build-dsc/",
-    "SQLbaseURL": "[concat('https://raw.githubusercontent.com/Microsoft/MSITARM/',variables('branch'),variables('SQLfolder'))]",
-    "IISbaseURL": "[concat('https://raw.githubusercontent.com/Microsoft/MSITARM/',variables('branch'),variables('IISfolder'))]",
+    "SQLbaseURL": "[concat('https://raw.githubusercontent.com/anblanco/MSITARM/',variables('branch'),variables('SQLfolder'))]",
+    "IISbaseURL": "[concat('https://raw.githubusercontent.com/anblanco/MSITARM/',variables('branch'),variables('IISfolder'))]",
 
     "CreateSQLUrl": "[concat(variables('SQLBaseURL'), 'azuredeploy.json')]",
     "CreateIISUrl": "[concat(variables('IISBaseURL'), 'azuredeploy.json')]",

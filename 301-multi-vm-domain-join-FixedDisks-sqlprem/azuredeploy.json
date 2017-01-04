@@ -317,7 +317,7 @@
 
      "branch": "master",
     "folder": "/301-multi-vm-domain-join-FixedDisks-sqlprem/",
-    "baseURL": "[concat('https://raw.githubusercontent.com/Microsoft/MSITARM/',variables('branch'),variables('folder'))]",
+    "baseURL": "[concat('https://raw.githubusercontent.com/anblanco/MSITARM/',variables('branch'),variables('folder'))]",
 
     "domainJoinzip": "scripts/DomainJoin.ps1.zip",
     "createVMtemplate": "nested/template-MultipleVM.json",

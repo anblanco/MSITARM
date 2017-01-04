@@ -255,7 +255,7 @@
 
      "branch": "master",
     "folder": "/301-multi-vm-domain-join-SQLILB-build-dsc/",
-    "baseURL": "[concat('https://raw.githubusercontent.com/Microsoft/MSITARM/',variables('branch'),variables('folder'))]",
+    "baseURL": "[concat('https://raw.githubusercontent.com/anblanco/MSITARM/',variables('branch'),variables('folder'))]",
 
     "availabilitySetName": "[parameters('AvailabilitySet')]",
     "DomainJoinzip": "scripts/DomainJoin.ps1.zip",

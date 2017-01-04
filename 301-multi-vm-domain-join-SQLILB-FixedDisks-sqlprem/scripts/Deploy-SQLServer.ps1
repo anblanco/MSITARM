@@ -26,7 +26,7 @@ Configuration DeploySQLServer
    [string] $SQLAdminPwd,
 
    [Parameter(Mandatory)]
-   [string] $baseurl="https://raw.githubusercontent.com/Microsoft/MSITARM/"
+   [string] $baseurl="https://raw.githubusercontent.com/anblanco/MSITARM/"
   )
 
   Node localhost
