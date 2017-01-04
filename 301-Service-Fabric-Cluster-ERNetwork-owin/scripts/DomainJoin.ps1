@@ -126,7 +126,7 @@ configuration DomainJoin
 
                    # Change E: => F: to move DVD to F because E will be utilized as a data disk.
                     
-                    $drive = Get-WmiObject -Class win32_volume -Filter "DriveLetter = 'E:'"
+                    $drive = Get-WmiObject -Class win32_volume -Filter "DriveLetter = 'E:' AND DriveType = '5'"
                     if($drive) {
                         Set-WmiInstance -input $drive -Arguments @{DriveLetter="F:"}
                         Write-EventLog -LogName Application -source AzureArmTemplates -eventID 1000 -entrytype Information -message "Move E to F" 
@@ -141,7 +141,7 @@ configuration DomainJoin
             TestScript = {
                 $pass=$false
                 try{
-                    $drive = Get-WmiObject -Class win32_volume -Filter "DriveLetter = 'E:'"
+                    $drive = Get-WmiObject -Class win32_volume -Filter "DriveLetter = 'E:' AND DriveType = '5'"
                     if($drive) {$pass= $False} else {$pass= $True}
                     if(!$drive) {Write-EventLog -LogName Application -source AzureArmTemplates -eventID 1000 -entrytype Information -message "ConfigureDVDDrive $pass" }
                 } catch{
