@@ -201,6 +201,9 @@
       "allowedValues": [
         "dev",
         "test",
+	"uat",
+	"pre-production",
+	"svccont",
         "prod"
       ],
       "metadata": {

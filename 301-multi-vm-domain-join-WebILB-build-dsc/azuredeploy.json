@@ -199,10 +199,18 @@
         "description": "orgID tag for the Virtual Machine."
       }
     },
-    "env": {
+      "env": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "",
+      "defaultValue": "dev",
+      "allowedValues": [
+        "dev",
+        "test",
+	"uat",
+	"pre-production",
+	"svccont",
+        "prod"
+      ],
       "metadata": {
         "description": "environment tag for the Virtual Machine."
       }
