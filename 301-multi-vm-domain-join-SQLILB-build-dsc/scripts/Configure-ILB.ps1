@@ -37,10 +37,15 @@ try {
                     )
 
         $body = ConvertTo-Json -InputObject $params
+
+        Write-Host $uri
+        Write-Host $body
+
     
         $startRunbook = Invoke-RestMethod -Method Post -Uri $uri -Headers $headers -Body $body
         $jobID = $startRunbook.JobIds[0]
 
+          Write-Host $startRunbook.JobIds
             if($jobID) {
                             
                $jobstatusURL = "see Dashboard. Copy/paste this link-> 'http://{0}/?searchText={1}&f_mtype=SQLAO-Configuration&f_dateType=all'  " -f $dashboardURL,$AOAGListenerName
