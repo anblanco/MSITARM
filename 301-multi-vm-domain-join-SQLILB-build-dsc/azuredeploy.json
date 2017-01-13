@@ -520,7 +520,7 @@
         }
       },
       "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/',parameters('vmName'), copyindex(1))]"
+        "[concat('Microsoft.Resources/deployments/',parameters('vmName'), '-CreateVM')]"
       ]
     },
     {
