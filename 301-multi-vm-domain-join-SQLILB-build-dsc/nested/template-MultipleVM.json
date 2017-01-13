@@ -601,7 +601,7 @@
       "properties": {
         "publisher": "Microsoft.Powershell",
         "type": "DSC",
-        "typeHandlerVersion": "2.18",
+        "typeHandlerVersion": "2.21",
         "settings": {
           "ModulesUrl": "[variables('modulesUrl')]",
           "SasToken": "",
