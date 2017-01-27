@@ -145,7 +145,6 @@
     "CiOwner": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "",
       "metadata": {
         "description": "CiOwner tag for the Virtual Machine."
       }
@@ -153,7 +152,6 @@
     "CiAnalystGroup": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "",
       "metadata": {
         "description": "CiAnalystGroup tag for the Virtual Machine."
       }
@@ -283,83 +281,89 @@
                   "uri": "[variables('CreateVMUrl')]",
                   "contentVersion": "1.0.0.0"
               },
-              "parameters": {
-                  "localAdminUserName": {
-                      "value": "[parameters('localAdminUserName')]"
-                  },
-                  "localAdminPassword": {
-                      "value": "[parameters('localAdminPassword')]"
-                  },
-                  "domainJoinUserName": {
-                      "value": "[parameters('domainJoinUserName')]"
-                  },
-                  "domainJoinPassword": {
-                      "value": "[parameters('domainJoinPassword')]"
-                  },
-                  "vmName": {
-                      "value": "[parameters('vmName')]"
-                  },
-                  "DiskConfig": {
-                      "value": "[parameters('DiskConfig')]"
-                  },
-                  "vmSize": {
-                      "value": "[parameters('vmSize')]"
-                  },
-                  "DiskCount": {
-                      "value": "[parameters('DiskCount')]"
-                  },
-                  "DiskSize": {
-                      "value": "[parameters('DiskSize')]"
-                  },
-                  "numberOfInstances": {
-                       "value": "[parameters('numberOfInstances')]"
-                  },
-                  "imagePublisher": {
-                      "value": "[parameters('imagePublisher')]"
-                  },
-                  "imageOffer": {
-                      "value": "[parameters('imageOffer')]"
-                  },
-                  "sku": {
-                      "value": "[parameters('sku')]"
-                  },
-                  "userImageStorageAccountName": {
-                      "value": "[parameters('userImageStorageAccountName')]"
-                  },
-                "StorageAccountType": {
-                  "value": "[parameters('StorageAccountType')]"
-                },
-                  "domainName": {
-                      "value": "[parameters('domainName')]"
-                  },
-                  "appID": {
-                      "value": "[parameters('appID')]"
-                  },
-                  "orgID": {
-                      "value": "[parameters('orgID')]"
-                  },
-                  "env": {
-                      "value": "[parameters('env')]"
-                  },
-                "localAdmins": {
-                  "value": "[parameters('localAdmins')]"
-                },
-                "SQLAdmins": {
-                  "value": ""
-                },
-                "virtualNetwork": {
-                  "value": "[parameters('virtualNetwork')]"
-                  },
-                "vnetResourceGroup": {
-                      "value": "[parameters('vnetResourceGroup')]"
-                  },
-                "subnetName": {
-                      "value": "[parameters('subnetName')]"
-                  },
-                "ouPath": {
-                      "value": "[parameters('ouPath')]"
-                  }
+            "parameters": {
+              "localAdminUserName": {
+                "value": "[parameters('localAdminUserName')]"
+              },
+              "localAdminPassword": {
+                "value": "[parameters('localAdminPassword')]"
+              },
+              "domainJoinUserName": {
+                "value": "[parameters('domainJoinUserName')]"
+              },
+              "domainJoinPassword": {
+                "value": "[parameters('domainJoinPassword')]"
+              },
+              "vmName": {
+                "value": "[parameters('vmName')]"
+              },
+              "DiskConfig": {
+                "value": "[parameters('DiskConfig')]"
+              },
+              "vmSize": {
+                "value": "[parameters('vmSize')]"
+              },
+              "DiskCount": {
+                "value": "[parameters('DiskCount')]"
+              },
+              "DiskSize": {
+                "value": "[parameters('DiskSize')]"
+              },
+              "numberOfInstances": {
+                "value": "[parameters('numberOfInstances')]"
+              },
+              "imagePublisher": {
+                "value": "[parameters('imagePublisher')]"
+              },
+              "imageOffer": {
+                "value": "[parameters('imageOffer')]"
+              },
+              "sku": {
+                "value": "[parameters('sku')]"
+              },
+              "userImageStorageAccountName": {
+                "value": "[parameters('userImageStorageAccountName')]"
+              },
+              "StorageAccountType": {
+                "value": "[parameters('StorageAccountType')]"
+              },
+              "domainName": {
+                "value": "[parameters('domainName')]"
+              },
+              "CiOwner": {
+                "value": "[parameters('CiOwner')]"
+              },
+              "CiAnalystGroup": {
+                "value": "[parameters('CiAnalystGroup')]"
+              },
+              "appID": {
+                "value": "[parameters('appID')]"
+              },
+              "orgID": {
+                "value": "[parameters('orgID')]"
+              },
+              "env": {
+                "value": "[parameters('env')]"
+              },
+              "localAdmins": {
+                "value": "[parameters('localAdmins')]"
+              },
+              "SQLAdmins": {
+                "value": ""
+              },
+              "virtualNetwork": {
+                "value": "[parameters('virtualNetwork')]"
+              },
+              "vnetResourceGroup": {
+                "value": "[parameters('vnetResourceGroup')]"
+              },
+              "subnetName": {
+                "value": "[parameters('subnetName')]"
+              },
+              "ouPath": {
+                "value": "[parameters('ouPath')]"
               }
+            }
           }
       },
       {
