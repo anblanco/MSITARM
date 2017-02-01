@@ -121,6 +121,34 @@
         "Description": "Azure VM DiskSize of the VM"
       }
     },
+    "SQLServerAccount": {
+      "type": "string",
+      "minLength": 1,
+      "metadata": {
+        "description": "Account for SQL Server"
+      }
+    },
+    "SQLServerPassword": {
+      "type": "securestring",
+      "minLength": 1,
+      "metadata": {
+        "description": "Password for SQL Server"
+      }
+    },
+    "SQLAgentAccount": {
+      "type": "string",
+      "minLength": 1,
+      "metadata": {
+        "description": "Account for SQL Agent"
+      }
+    },
+    "SQLAgentPassword": {
+      "type": "securestring",
+      "minLength": 1,
+      "metadata": {
+        "description": "Password for SQL Agent"
+      }
+    },
     "userImageStorageAccountName": {
       "type": "string",
       "defaultValue": "",
@@ -395,7 +423,20 @@
             },
             "DiskSize": {
               "value": "[parameters('DiskSize')]"
+            },
+            "SQLServerAccount": {
+              "value": "[parameters('SQLServerAccount')]"
+            },
+            "SQLServerPassword": {
+              "value": "[parameters('SQLServerPassword')]"
+            },
+            "SQLAgentAccount": {
+              "value": "[parameters('SQLAgentAccount')]"
+            },
+            "SQLAgentPassword": {
+              "value": "[parameters('SQLAgentPassword')]"
             }
+
           }
         },
         "dependsOn": [

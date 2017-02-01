@@ -84,6 +84,7 @@
     "SQLAdmin": {
       "type": "string",
       "minLength": 1,
+      "defaultValue": "not used",
       "metadata": {
         "description": "Account for SQL Acccess"
       }
@@ -91,6 +92,7 @@
     "SQLAdminPwd": {
       "type": "securestring",
       "minLength": 1,
+      "defaultValue" :  "not used", 
       "metadata": {
         "description": "Password for SQL Access"
       }
