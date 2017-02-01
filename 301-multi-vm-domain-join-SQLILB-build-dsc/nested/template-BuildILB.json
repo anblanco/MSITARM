@@ -100,7 +100,7 @@
   "resources": [
     {
       "apiVersion": "2015-05-01-preview",
-      "name": "[concat(parameters('vmName'),'1','/', variables('vmILBExtensionName'))]",
+      "name": "[concat(parameters('vmName'),'2','/', variables('vmILBExtensionName'))]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "location": "[resourceGroup().location]",
       "properties": {
